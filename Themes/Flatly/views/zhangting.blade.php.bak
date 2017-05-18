@@ -1,0 +1,124 @@
+@extends('layouts.master')
+@section('title')
+{{ $page->title }} | @parent
+@stop
+<script> 
+var homeUrl = "http://zy.dyrt99.com/";
+var fieldJson=[{"page_id":1040,"title":"logo","type":"logo","content":"uploader\/file\/20170412\/58edc8d61cca4608.jpg","is_lock":1},{"page_id":1040,"title":"footer","type":"footer","content":"<a>\u6caaICP\u590716050303\u53f7-1<\/a>","is_lock":1}];
+var systemConf = {"id":1485,"sid":15,"reffer":55,"company_id":1};
+var wqConf = [];
+</script>
+<link rel="stylesheet" type="text/css" href="/css/zhangting_style.css"/>
+<script src="/js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/layer.js" type="text/javascript" charset="utf-8"></script>
+<link rel="/js/skin/layer.css" id="layui_layer_skinlayercss">
+<script src="/js/zhangting_js.js" type="text/javascript" charset="utf-8"></script>
+@section('meta')
+<meta name="title" content="{{ $page->meta_title}}" />
+<meta name="description" content="{{ $page->meta_description }}" />
+@stop
+@section('content')
+    <div class="top">
+        <div class="top_1" ></div>
+        <div class="top_2">
+            <div class="ewm">
+                <img src="/images/logo500px.png"/>
+            </div>
+            <div class="ewm_tx wxnumber">
+                moneytreestore
+            </div>
+        </div>
+        <div class="top_3"></div>
+    </div>
+    <div class="content_z">
+        <p class="yii_template" type="text" name="t3" >9月历史战绩！这些股，领到的都赚大发了！</p>
+        <div class=" yii_template" type="edit" name="t4">
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <th>股票名称</th>
+                    <th>代码</th>
+                    <th>推荐买入价</th>
+                    <th>截至日期收盘价</th>
+                    <th>收益率</th>
+                </tr>
+                <tr class="fs">
+                    <td>廊坊发展</td>
+                    <td>600149</td>
+                    <td>15.3</td>
+                    <td>34.12（4月17日）</td>
+                    <td>132.27%</td>
+                </tr>
+                <tr>
+                    <td>长江投资</td>
+                    <td>600119</td>
+                    <td>17.61</td>
+                    <td>26.98（4月17日）</td>
+                    <td>54.26%</td>
+                </tr>
+                <tr>
+                    <td>万科A</td>
+                    <td>000002</td>
+                    <td>20.45</td>
+                    <td>25.85（4月17日）</td>
+                    <td>31.42%</td>
+                </tr>
+                <tr>
+                    <td>嘉凯城</td>
+                    <td>000918</td>
+                    <td>9.05</td>
+                    <td>11.84（4月17日）</td>
+                    <td>34.24%</td>
+                </tr>
+                <tr>
+                    <td>名家汇</td>
+                    <td>300506</td>
+                    <td>21</td>
+                    <td>45.98（4月22日）</td>
+                    <td>136.05%</td>
+                </tr>
+                <tr class="bot">
+                    <td>中航资本</td>
+                    <td>600705</td>
+                    <td>5.84</td>
+                    <td>7.14（4月22日）</td>
+                    <td>25.26%</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="content_t">
+        <div class="content_1">
+            <div class="txt_1 yii_template" type="edit" name="t5">
+                <p>高手布局  4月潜力牛股</p>
+                <p>4月第一批牛股已送出，名额有限，欲领从速</p>
+            </div>
+        </div>
+        <div class="content_2 yii_template" type="bg" name="tg33" src="/images/content_07.jpg"></div>
+        <div class="content_3 yii_template" type="bg" name="tg31" src="/images/content_08.jpg"></div>
+        <div class="content_4">
+            <div class="txt_2">
+                <p class=" yii_template" type="text" name="t6" >这3只股已经跌无可跌，即将爆发</p>
+            </div>
+        </div>
+        <div class="content_5">
+            <a href="javascript:;" class="btn"></a>
+            <p class=" yii_template" type="edit" name="t7">仅剩<span id="num2">112个</span>名额</p>
+        </div>
+    </div>
+		<div class="fixd_box yii_template" type="bg" name="bgss" src="/images/fixd.png">
+			<div class="tex yii_template" type="edit" name="t9">
+				<p>扫码免费领取</p>
+				<p>已有<span id="num"> 388 </span>人 领取</p>
+			</div>
+			<div class="ewm_1">
+				<img src="/images/logo500px.png" class="wxqrcode"/>
+			</div>
+		</div>
+		<div class="layer_box">
+			<img src="/images/logo500px.png" class="wxqrcode"/>
+			<div class="close_x"></div>
+			<p>还可搜索微信号：<span class="wxnumber">moneytreestore </span>领取牛股</p>
+		</div>
+        <script src="/js/zhangting_jquery.fanbu.min.js" type="text/javascript"></script>
+        <script src="/js/zhangting_init.js" type="text/javascript"></script>
+@stop

@@ -1,0 +1,326 @@
+@extends('layouts.master')
+@section('title')
+{{ $page->title }} | @parent
+@stop
+@section('meta')
+<link href="/css/yaoqianshu_main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/liMarquee.css">
+<script src="/js/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script src="/js/enco.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/show.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/layer.js" type="text/javascript" charset="utf-8"></script>
+<link rel="/js/skin/layer.css" id="layui_layer_skinlayercss">
+<script type="text/javascript">
+$(function () {
+    var der = "请输入你的手机号";
+    var der2 = "请输入验证码";
+    var der3 = "如: 陈先生/杨女士";
+    $("#txtMobile").focus(function () {
+        if ($(this).val() == der) {
+            $(this).val("");
+        }
+    });
+    $("#txtMobile").blur(function () {
+        if ($(this).val() == "" || $(this).val() == der) {
+            $(this).val(der);
+        }
+    });
+    $("#txtYZM").focus(function () {
+        if ($(this).val() == der2) {
+            $(this).val("");
+        }
+    });
+    $("#txtYZM").blur(function () {
+        if ($(this).val() == "" || $(this).val() == der2) {
+            $(this).val(der2);
+        }
+    });
+    $("#txtName").focus(function () {
+        if ($(this).val() == der3) {
+            $(this).val("");
+        }
+    });
+    $("#txtName").blur(function () {
+        if ($(this).val() == "" || $(this).val() == der3) {
+            $(this).val(der3);
+        }
+    });
+    if ($.browser.msie && ($.browser.version == "6.0") && !$.support.style) {
+        //代码
+        $(".login").css("position", "absolute");
+    }
+});
+</script>
+<style type="text/css">
+td{
+    color:red;
+}
+</style>
+<meta name="title" content="{{ $page->meta_title}}" />
+<meta name="description" content="{{ $page->meta_description }}" />
+@stop
+@section('content')
+<div id="banner">
+    <div class="imPc">
+        <ispan class="downloadNow"><a href="javascript:void(0);"  class="d1"></a></span>
+    </div>
+</div>
+<div class="maintop">
+    <div class="gytopimg">
+        <ul class="daohang">
+            <li class="mtOne"><a href="#One" class="a1"></a><p>买在低点 可以实现</p></li>
+            <li><a href="#Two" class="a2"></a><p>关键买卖 决定成败</p></li>
+            <li><a href="#Three" class="a3"></a><p>主力动机 精准狙击</p></li>
+            <li><a href="#Forth" class="a4"></a><p>红绿转换 稳胜操作</p></li>
+            <li><a href="#Five" class="a5"></a><p>个股强弱 自有定夺</p></li>
+        </ul>
+    </div>
+</div> 
+<div class="box_div midMidAll">
+    <a id="One"></a>
+    <div class="line"></div>
+    <div class="m_title_p1"><span class="p1"></span></div>
+    <div class="tbOne-trThree">
+        <ul>
+            <li class="left" style="width: 300px;padding:0 0 0 100px; overflow: hidden;">
+                <p>通过估值、资金、技术三大综合条件，对个股的绝对低位进行确定评判。<span class="black Strong">真正做到先知先觉<span class="red">左侧交易买在阶段最低点。</span></span></p>
+                <p>把握阶段绝对低位，先知先觉买在低点，最终实现左侧交易操作。在波段抄底，超跌反弹应用中<span class="Strong">准确率超过90%！</span></p>
+                <p style="line-height:0px;"><span class="downloadNow"><a href="javascript:void(0);" class="dl1" onclick="showDiv();"></a></span></p>
+            </li>
+            <li class="right">
+                <img src="/images/al_1.png" alt="">
+            </li>
+        </ul>
+        <ul class="clear" style="height:30px;"></ul>
+    </div>
+    <a id="Two"></a>
+    <div class="line"></div>
+    <div class="m_title_p1"><span class="two-p1"></span></div>
+    <div class="tbOne-trThree">
+        <ul>
+            <li class="left">
+                <img src="/images/al_2.png" alt="">
+            </li>
+            <li class="right" style="width:400px;">
+                <p style="margin-top:40px;">
+                结合全球主流资本市场同行业的平均估值水平，<br>
+                采取不低于20年的平均估值进行动态参数设置，<br>
+                综合考虑行业所处不同发展阶段，
+                </p>
+                <p>
+                自上而下的将
+                <span class="red Strong">
+                    大盘、行业指数、个股的价值中枢、安全边际、<br>
+                    风险警戒
+                </span>一目了然的呈现出来，<br>
+                <span class="black Strong">让交易真正成为有的放矢的投资，</span>而非投机或赌博。
+                </p>
+                <p><span class="downloadNow"><a href="javascript:void(0);" onclick="showDiv();" class="dl2"></a></span></p>
+            </li>
+        </ul>
+        <ul class="clear" style="height:30px;"></ul>
+    </div>
+    <a id="Three"></a>
+    <div class="line"></div>
+    <div class="m_title_p1"><span class="three-p1"></span></div>
+    <div class="tbOne-trThree">
+        <ul>
+            <li class="left" style="width: 350px; margin: 0 0 0 70px; overflow: hidden; ">
+                <p>
+                分析机构账户、700余私募账户及中小散户的交易方向，
+                云计算技术在盘中不间断的进行动态加权统计，得出分值，
+                ±10分以上对短线方向和力度产生影响，
+                </p>
+                <p style="margin-top:29px;">
+                <span class="black Strong">主要是识别资金未来行为动机，</span>
+                其中包含：<span class="red Strong">散户跟风、私募补仓、机构拉伸、</span>
+                <span class="green Strong">散户出逃、私募打压、机构杀跌。</span>
+                </p>
+                <p><span class="downloadNow"><a href="javascript:void(0);" onclick="showDiv();" class="dl3"></a></span></p>
+            </li>
+            <li class="right">
+                <img src="/images/al_3.png" alt="">
+            </li>
+        </ul>
+        <ul class="clear" style="height:30px;"></ul>
+    </div>
+    <a id="Forth"></a>
+    <div class="line"></div>
+    <div class="m_title_p1"><span class="forth-p1"></span></div>
+    <div class="tbOne-trThree">
+        <ul>
+            <li class="left">
+                <img src="/images/al_4.png" alt="">
+            </li>
+            <li class="right" style="width:400px;">
+                <p style="padding-top:20px;">
+                摇钱术独创供求资金系统，不单研究已经成交的主力资金，
+                更进一步对所有挂单未成交数据进行深度统计清洗，
+                <span class="red Strong">让投资者进一步了解未来资金操作意图和方向，</span>
+                </p>
+                <p>
+                其实战应用价值及对目标品种未来趋势判断的准确度，
+                远超单纯研究主力资金，是先知先觉捕获龙头领涨行业、
+                锁定龙头股的必备数据。
+                </p>
+                <p>
+                供求资金将未来资金行为动机更加直观的展现给用户。
+                <span class="red Strong">红色填充区意为资金行为做多力度强于做空力度；</span>
+                <span class="green Strong">绿色填充区意为资金行为做空力度大于做多力度。</span>
+                </p>
+                <p><span class="downloadNow"><a href="javascript:void(0);" onclick="showDiv();" class="dl4"></a></span></p>
+            </li>
+        </ul>
+        <ul class="clear" style="height:30px;"></ul>
+    </div>
+    <a id="Five"></a>
+    <div class="line"></div>
+    <div class="m_title_p1"><span class="five-p1"></span></div>
+    <div class="img_five"><img src="/images/al_5.png" alt=""></div>
+    <div class="tbOne-trThree">
+        <ul>
+            <li class="left" style="width:300px;padding:0 0 30px 130px;">
+                <span class="downloadNow"> <a href="javascript:void(0);" onclick="showDiv();" class="dl5"></a></span>
+            </li>
+            <li class="right" style="width:520px;">
+                <p style="margin-top: 30px;">
+                综合考量<span class="red Strong">技术、估值、资金</span>三方面对股价<br>
+                的影响，应用动态参数决策系统在不同时期对证券市场所有品种<br>
+                打出综合分值。<span class="Strong">是综合选股必备利器。</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="box_div">
+    <div class="line"></div>
+    <div class="newtit"><img src="/images/newtt_1.png" alt=""></div>
+    <div class="newtxt">全国首创三色K线，助你把握机会规避风险。四大决策系统共同作用，对量价时空进行综合分析，越跌越买，最终实现买在低点。在波段抄底、超跌反弹应用中准确率超过90%！</div>
+    <div class="newbg1">
+        <div class="flash">
+            <ul>
+                <li class="show"><span class="title title1"></span><div class="titleImg titleImg1"></div></li>
+                <li><span class="title title2"></span><div class="titleImg titleImg2"></div></li>
+                <li><span class="title title3"></span><div class="titleImg titleImg3"></div></li>
+            </ul>
+        </div>
+    </div>
+    <div class="newbg2">
+        <div class="newtxt newtxt_left">
+            <p>投资者在市场当中最容易犯的大忌就是：追涨杀跌。就这一忌，足已让无数投资者常套深渊里面，无法自拔。</p>
+            <p>
+            摇钱术针对这一难题，展开了六年攻关研究，通过独创的“九大”炒股运作模型，成功研发出目前市场最为精准的“先知先觉、左侧选股、买在低点”实战技巧“黄金坑”，提前为投资者标示出技术上即将见底的股票，成为国内第一代云计算炒股软件的核心基因。
+            </p>
+        </div>
+        <div class="newbtn1 downloadNow"><a href="javascript:void();" onclick="showDiv();"></a></div>
+    </div>
+    <div class="line"></div>
+    <div class="newtit"><img src="/images/newtt_3.png" alt=""></div>
+    <div class="newtxt">摇钱术特有价值分析体系，及时捕捉因市场非理性抛售、估值严重低于行业平均水平的潜力个股，助你快速锁定股价过度下跌、亟待反弹的龙头股，助你赚钱超额投资收益！</div>
+    <div class="newbg5">
+        <div class="flash">
+            <ul>
+                <li class="show"><span class="title title4"></span><div class="titleImg titleImg4"></div></li>
+                <li><span class="title title5"></span><div class="titleImg titleImg5"></div></li>
+                <li><span class="title title6"></span><div class="titleImg titleImg6"></div></li>
+            </ul>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="zunxiang"><a onclick="showDiv();" href="javascript:void(0);"></a></div>
+    <div style="margin:30px auto;"></div>
+</div>
+<div class="line"></div>
+<div class="m_title"><span class="eight-p1"></span></div>
+<div id="list_zs">
+    <ul>
+        <li><img src="/images/bg_t1.png" alt=""></li>
+        <li>
+            <div class="list_zs-Content">
+                <ul>
+                    <li><img src="/images/zs1.png" alt=""></li>
+                    <li><img src="/images/zs2.png" alt=""></li>
+                    <li><img src="/images/zs3.png" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="/images/zs4.png" alt=""></li>
+                    <li><img src="/images/zs5.png" alt=""></li>
+                    <li><img src="/images/zs6.png" alt=""></li>
+                </ul>
+            </div>
+        </li>
+        <li><img src="/images/bg_b1.png" alt=""></li>
+    </ul>
+</div>
+<a href="#Top1"><div class="back" id="back" style="display: none;"></div> </a>
+<!-- 浮动登录窗口 -->
+<div id="login"class="login" style="position: absolute; top: 48%;"><div class="loginBox">
+        <div id="closelogin"><a href="javascript:void(0);" onclick="hideDiv();"><img src="/images/no.gif" width="20" height="20" border="0"></a></div>
+        <div class="loginInput">
+            <input id="txtName" type="text" value="如: 陈先生/杨女士" class="login1">
+            <input id="txtMobile" type="text" value="请输入你的手机号" class="login1">
+            <input id="txtYZM" type="text" value="请输入验证码" class="login1">
+            <div id="table1" style="position: absolute; width:550px;height:220px;left:-65%;top:230%" >
+                <table class="table table-bordered table-striped table-condensed "  style="margin-bottom: 0px;width:550px">  
+                    <thead>  
+                        <th width="137px">姓名</th>  
+                        <th width="100px">手机号</th>  
+                        <th width="100px">股票</th>  
+                        <th>代码</th>  
+                        <th>涨幅</th>  
+                    </thead>  
+                </table>  
+                <marquee direction="up" scrollamount="2" bgcolor="#fcf8e3" onmouseout="this.start()" align="middle"   onmouseover="this.stop()" width="550px" >  
+                <table class="table table-bordered table-striped table-condensed" style="width:550px">  
+                    <tr>  
+                        <td width="137px">周先生</td>  
+                        <td width="100px">136****2345</td>  
+                        <td  width="100px">东方汽车</td>  
+                        <td>600006</td>  
+                        <td>17.56%</td>  
+                    </tr>  
+                    <tr>  
+                        <td width="137px">周先生</td>  
+                        <td width="100px">136****2345</td>  
+                        <td  width="100px">东方汽车</td>  
+                        <td>600006</td>  
+                        <td>17.56%</td>  
+                    </tr>  
+                    <tr>  
+                        <td width="137px">周先生</td>  
+                        <td width="100px">136****2345</td>  
+                        <td  width="100px">东方汽车</td>  
+                        <td>600006</td>  
+                        <td>17.56%</td>  
+                    </tr>  
+                    <tr>  
+                        <td width="137px">周先生</td>  
+                        <td width="100px">136****2345</td>  
+                        <td  width="100px">东方汽车</td>  
+                        <td>600006</td>  
+                        <td>17.56%</td>  
+                    </tr>  
+                    <tr>  
+                        <td width="137px">周先生</td>  
+                        <td width="100px">136****2345</td>  
+                        <td  width="100px">东方汽车</td>  
+                        <td>600006</td>  
+                        <td>17.56%</td>  
+                    </tr>  
+                </table>  
+                </marquee>  
+            </div>  
+        </div>
+    </div>
+    <div class="floatGet"><a href="javascript:void(0);" onclick="getVerificationCode($('#txtMobile').val(),$('#txtName').val());" class="f1"></a></div>
+    <!--<div class="floatDownload"><a href="javascript:void(0);" onclick="getRegUser($('#txtMobile').val(),$('#txtYZM').val());" class="f2"></a></div>-->
+    <div class="floatDownload"><a href="javascript:void(0);" onclick="adduser($('#txtName').val(),$('#txtMobile').val());" class="f2"></a></div>
+</div>
+</div>
+<div class="layer_box">
+    <img src="/images/logo500px.png" class="wxqrcode"/>
+    <div class="close_x"></div>
+    <p>还可搜索微信号：<span class="wxnumber">moneytreestore </span>领取牛股</p>
+</div>
+<script type="text/javascript" charset="utf-8" src="https://www.v5kf.com/142123/v5kf.js"></script>
+@stop

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>包公会员</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="包公,包公app,包公软件,建筑人名片,速翼" />
+		<meta name="description" content="包公app是上海速翼开发并运营的服务于建筑行业的平台，在包公app上建立包公自己的建筑人名片，充分展示建筑人的工程成果；包公app上有建筑工程招标、建筑工程投标、建筑行业工种、工程队联系、建筑工程险等项目，建筑人所需要的各方面在包公app上一站完成。" />
+		<meta name="copyright" content="Copyright (c) suyikeji.com" />
+		<meta name="author" content="上海速翼网络科技股份有限公司" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css">
+		<style>
+			body,
+			html {
+				font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", 微软雅黑, "Microsoft YaHei", "WenQuanYi Micro Hei";
+				background: url(images/vip.jpg);
+				background-repeat: no-repeat;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.header {
+				font-size: 16px;
+				position: absolute;
+				top: 0;
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				background: rgba(48, 48, 48, 1);
+				z-index: 999999;
+				text-align: center;
+			}
+			
+			.header_l {
+				float: left;
+				display: inline-block;
+				margin-left: 20px;
+			}
+			
+			.header_r {
+				float: right;
+				display: inline-block;
+				margin-right: 0px;
+			}
+			
+			.header_r span {
+				display: inline-block;
+				color: #fff;
+				width: 40px;
+				height: 46px;
+				font-size: 19px;
+				margin-right: 15px;
+				text-align: center;
+			}
+			
+			.header_r span.last {
+				margin-right: 10px;
+			}
+			
+			.header_r span.line {
+				border-bottom: 4px solid #fff;
+			}
+			
+			.header img {
+				vertical-align: -10px;
+				height: 30px;
+			}
+			
+			.swiper-container {
+				width: 100%;
+				padding-top: 100px;
+			}
+			
+			.swiper-slide {
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 70%;
+			}
+			
+			.a {
+				position: fixed;
+				bottom: 10px;
+				width: 100%;
+				text-align: center;
+				font-size: 14px;
+				color: #464646;
+			}
+			
+			.swiper-pagination-bullet-active,
+			.swiper-pagination-bullet {
+				background: #fff;
+				width: 10px;
+				height: 10px;
+				margin-right: 6px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="header"><span class="header_l"><img src="images/logo.png"></span><span class="header_r" id="menu"><span onclick="window.location='index.html'">首页</span><span class="line">会员</span><span class="last" onclick="window.location.href='http://a.baogongapp.com'">下载</span></span>
+		</div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper" id="list">
+				<div class="swiper-slide" onclick="active(2)" style="background-image:url('images/vip1.png')"></div>
+				<div class="swiper-slide" onclick="active(2)" style="background-image:url('images/vip2.png')"></div>
+				<div class="swiper-slide" onclick="active(2)" style="background-image:url('images/vip3.png')"></div>
+				<div class="swiper-slide" onclick="active(1)" style="background-image:url('images/vip4.png')"></div>
+				<div class="swiper-slide" onclick="active(1)" style="background-image:url('images/vip5.png')"></div>
+				<div class="swiper-slide" onclick="active(1)" style="background-image:url('images/vip6.png')"></div>
+			</div>
+		</div>
+		<div class="a">
+			&nbsp;
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/layer.js"></script>
+		<script type="text/javascript" src="js/swiper-3.4.0.jquery.min.js"></script>
+		<script>
+			$(function() {
+				$("body,html").css("background-size", $(window).width() + "px " + $(window).height() + "px");
+				$('.swiper-slide').css('height', $('.swiper-slide').width() * 950 / 590 + 'px');
+				$(".swiper-container").css("padding-top", ($(window).height() - $('.swiper-slide').width() * 950 / 590 + 50) / 2);
+				var swiper = new Swiper('.swiper-container', {
+					pagination: '.a',
+					effect: 'coverflow',
+					centeredSlides: true,
+					loop: true,
+					speed: 1000,
+					autoplay: 3000,
+					autoplayDisableOnInteraction: false,
+					slidesPerView: 'auto',
+					coverflow: {
+						rotate: 0,
+						stretch: -55,
+						depth: 350,
+						modifier: 1,
+						slideShadows: false
+					}
+				});
+			});
+
+			function active(id) {
+				if(id == 1) {
+					layer.confirm("下载包公APP", {
+						btn: ['再看看', '立即下载'],
+						title: " "
+					}, function(index) {
+						layer.close(index);
+					}, function() {
+						window.location.href = 'http://a.baogongapp.com';
+					});
+				} else {
+					layer.confirm("联系包公客服", {
+						btn: ['再看看', '立即联系'],
+						title: " "
+					}, function(index) {
+						layer.close(index);
+					}, function() {
+						window.location.href = "tel:10086";
+					});
+				}
+
+			}
+		</script>
+	</body>
+
+</html>

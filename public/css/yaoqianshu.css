@@ -1,0 +1,32 @@
+.banner {
+    max-width: 100%;
+    height: auto;
+    background:url(/images/maintop1bg.jpg);
+    clear:both;
+}
+.downloadNow{ 
+    width:28%;
+    height:auto;
+    margin:-8% 0 0 55%;
+    position:relative
+}
+.wz p{
+    width:10%;
+    float:left;
+}
+.top5{
+    margin:5% 0 ;
+}
+.top2{
+    margin:2% 0 ;
+}
+.black{ color:#000000;}
+#black{ color:#000000;}
+.green{ color:#008A00;}
+.Strong{ font-weight:bold;}
+.red{color:#D00000;}
+.news_1{
+    width:45%;
+    margin:-20% 0 0 5%;
+    position:relative
+}

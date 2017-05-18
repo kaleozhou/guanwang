@@ -1,0 +1,17 @@
+.footer-top{
+    height: auto;
+    max-width: 100%;
+    background:url(/images/bg_bottom1.png);
+}
+.footer-bottom {
+    max-width: 100%;
+    height: auto;
+    background:black;
+    clear:both;
+}
+.footer-bottom li{
+    color:gray;
+}
+.footer-bottom a{
+    color:gray;
+}

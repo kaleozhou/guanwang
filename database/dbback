@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# ******************************************************
+# Author       : kaleo
+# Last modified: 2017-05-15 19:16
+# Email        : kaleo1990@hotmail.com
+# Filename     : dbback
+# Description  : 
+# ******************************************************
+mysqldump -uroot -pkaleozhou guanwang > guanwang.sql

@@ -1,0 +1,22 @@
+.layer_box{display: none;width: 80%;height:auto;background: url(/images/clean_form_bg.jpg) no-repeat center top;text-align: center;}
+.layer_box .close_x{width: 41px;height: 40px;position: absolute;right: 23%;top: 0; cursor: pointer;}
+.layer_box p{text-align: center;font-size:40px;margin: 0px;padding-top: 10px;margin-right: 25px;}
+.layer_box p span{font-weight: bold;color: #ff0000;height:30px;}
+.layui-layer{box-shadow: none!important;}
+
+.form_box{text-align: center;}
+.regsterTitle {
+    margin-top:40px;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+    font-family: '黑体';
+}
+.box_txt{
+width:50%;
+}
+.box_phone{
+width:20%;
+}

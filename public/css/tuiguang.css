@@ -1,0 +1,47 @@
+.banner{
+    width:100%;
+    background:#211a36;
+}
+.center{
+    text-align:center;
+}
+.page1{ width:100%; height:auto; background:#211a36; overflow:hidden;}
+.page1 img{ display:block; margin:10% auto 0;}
+.page1 p{ font-size:24px; color:#fcf9e0; text-align:center; line-height:47px; margin-top:68px;}
+.page1 p font{ color:#f8e55f;}
+
+.page1_1{ width:100%; height:auto; background:#211a36; overflow:hidden;}
+.page1_1 p{ font-size:24px; color:#ece5db; text-align:center; line-height:38px; margin:30px 0 80px;}
+.page1_1 p font{ font-size:30px; color:#feea02;font-weight:bold;}
+.page1_1 img{ display:block; margin:0 auto 140px; box-shadow: 3px 3px 6px rgba(6,0,1,0.55);}
+.page2{ width:100%;  color:#fcf9e0;height:auto; background:#211a36; overflow:hidden;}
+
+.page3{ background:#feea02; max-width:100%;height:auto; overflow:hidden;}
+
+.page4{ background:#211a36; width:100%; overflow:hidden;}
+.page4 p{ font-size:24px; color:#ece5db; text-align:center; line-height:38px; margin:80px 0;}
+.page4 p font{ font-size:30px; color:#feea02;font-weight:bold;}
+
+.page5{ width:100%; height:auto; background:#211a36; overflow:hidden;}
+.page5 h1{ font-size:48px; color:#ece5db; text-align:center; margin-top:90px;}
+.page5 h2{ font-size:24px; color:#feea02; text-align:center; margin-top:24px; font-weight:normal;}
+
+.page6{ 
+background:#feea02;
+text-align:center;
+}
+.fonttop{
+width:100%;
+height:90px;
+background:#feea02;
+}
+.page6 .h3font{ font-size:48px; font-weight:bold; color:#211a36; text-align:center; margin-bottom:40px;}
+
+.fontbg{ overflow:hidden; margin-bottom:32px; text-align:center;}
+.fontbg li{ width:30%; height:130px; background:url(/images/fontbg.jpg) no-repeat center center; float:left; margin-left:18px; margin-bottom:32px;}
+.fontbg li:first-child{ margin:0;}
+.fontbg li.li1{ margin:0;}
+.fontbg li h1{ font-size:24px; color:#ece5db; font-weight:normal; text-align:center; line-height:24px; margin-top:30px;}
+.fontbg li h2{ font-size:16px; color:#ece5db; font-weight:normal; text-align:center; line-height:16px; margin-top:20px;}
+.fontbg li.ecode{ background:none; position: relative;}
+.fontbg li.ecode img{ display:block; position:absolute; top:-10px;}

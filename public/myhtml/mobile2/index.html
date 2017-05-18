@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<title>顶点财经|摇钱术</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="摇钱术,诊股软件" />
+		<meta name="description" content="摇钱术秉着让天下没有难理之财的宗旨,用强大的数据支持透视价格高低,用精确的运算解码升跌原理。" />
+		<meta name="copyright" content="Copyright (c) suyikeji.com" />
+		<meta name="author" content="杭州顶点财经网络传媒有限公司" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="css/jquery.fullPage.css">
+		<link rel="stylesheet" href="css/swiper-3.4.0.min.css">
+		<style>
+			body {
+				font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", 微软雅黑, "Microsoft YaHei", "WenQuanYi Micro Hei";
+				font-size: 12px;
+			}
+			
+			.section {
+				position: relative;
+			}
+			
+			.section1 {
+				font-size: 20px;
+				color: #fff;
+				background: url(images/1.jpg);
+				background-size: 100% 100%;
+			}
+			
+			.section2 {
+				background: url(images/2.jpg);
+				background-size: 100% 100%;
+			}
+			
+			.section3 {
+				background: url(images/3.jpg);
+				background-size: 100% 100%;
+			}
+			
+			.section4 {
+				background: url(images/4.jpg);
+				background-size: 100% 100%;
+			}
+			
+			.section5 {
+				background:url(images/5.jpg) no-repeat center;
+				background-size: cover;
+			}
+			
+			.section6 {
+				background: url(images/6.jpg);
+				background-size: 100% 100%;
+			}
+			
+			.section7 {
+				background: url(images/7.jpg);
+				background-size: 100% 100%;
+			}
+			
+			.header {
+				font-size: 16px;
+				position: absolute;
+				top: 0;
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				background: rgba(48, 48, 48, 1);
+				z-index: 999999;
+				text-align: center;
+			}
+			
+			.header_l {
+				float: left;
+				display: inline-block;
+				margin-left: 20px;
+			}
+			
+			.header_r {
+				float: right;
+				display: inline-block;
+				margin-right: -5px;
+			}
+			
+			.header_r span {
+				display: inline-block;
+				color: #fff;
+				width: 40px;
+				height: 46px;
+				font-size: 19px;
+				margin-right: 15px;
+				text-align: center;
+			}
+			
+			.header_r span.line {
+				border-bottom: 4px solid #fff;
+			}
+			
+			.header img {
+				vertical-align: -10px;
+				height: 30px;
+			}
+			
+			.arrow {
+				position: absolute;
+				bottom: 15px;
+				z-index: 999999;
+				text-align: center;
+				width: 100%;
+			}
+			
+			.arrow img {
+				width: 28px;
+			}
+			/*================================*/
+			
+			.main1_logo {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				top: 25%;
+			}
+			
+			.main1_logo img {
+				width: 80%;
+			}
+			
+			.main1_ios {
+				position: absolute;
+				left: 10%;
+				width: 80%;
+				bottom: 139px;
+				text-align: center;
+				border: 2px solid #fff;
+				border-radius: 6px;
+				height: 44px;
+				line-height: 44px;
+			}
+			
+			.main1_android {
+				position: absolute;
+				left: 10%;
+				width: 80%;
+				bottom: 150px;
+				text-align: center;
+				border: 2px solid #fff;
+				border-radius: 6px;
+				height: 44px;
+				line-height: 44px;
+				bottom: 70px;
+			}
+			
+			.main1_ios img,
+			.main1_android img {
+				width: 25px;
+				vertical-align: -5px;
+				margin-right: 9px;
+			}
+			/*================================*/
+			
+			.main2_num {
+				position: absolute;
+				width: 100%;
+				font-size: 23px;
+				color: #FFFFFF;
+				text-align: center;
+				top: 14%;
+			}
+			
+			.main2_logo {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				top: 21%;
+			}
+			
+			.main2_logo img {
+				width: 76%;
+			}
+			
+			.main2_info {
+				position: absolute;
+				top: 32%;
+				left: 5%;
+				width: 90%;
+			}
+			
+			.main2_info1 {
+				margin-top: 20px;
+				width: 50%;
+				float: left;
+				text-align: center;
+			}
+			
+			.main2_info1_1 img {
+				width: 50%;
+			}
+			
+			.main2_info1 span {
+				display: block;
+				color: #fff;
+			}
+			
+			.main2_info1_2 {
+				font-size: 22px;
+			}
+			
+			.main2_info1_3 {
+				font-size: 19px;
+			}
+			/*================================*/
+			
+			.main3_tit1 {
+				position: absolute;
+				top: 11%;
+				left: 30%;
+				width: 60%;
+			}
+			
+			.main3_tit2 {
+				position: absolute;
+				top: 35%;
+				left: 42%;
+				width: 60%;
+			}
+			
+			.main3_tit3 {
+				position: absolute;
+				top: 62%;
+				left: 30%;
+				width: 60%;
+			}
+			
+			.main3_tit1 span,
+			.main3_tit2 span,
+			.main3_tit3 span {
+				display: block;
+			}
+			
+			.main3_tit1_1 {
+				width: 80%;
+			}
+			
+			.main3_tit1_1 img {
+				width: 100%;
+			}
+			
+			.main1_tit1_2 {
+				color: #fff;
+				font-size: 16px;
+			}
+			
+			.main1_tit1_2.wid {
+				width: 80%;
+			}
+			
+			.main3_btn {
+				position: absolute;
+				bottom: 55px;
+				left: 10%;
+				height: 44px;
+				line-height: 44px;
+				width: 80%;
+				font-size: 20px;
+				color: #FFFFFF;
+				z-index: 999999;
+				text-align: center;
+				border-radius: 6px;
+				border: 2px solid #fff;
+			}
+			/*================================*/
+			
+			.swiper-container {
+				width: 100%;
+				position: absolute;
+				bottom: 60px;
+			}
+			
+			.swiper-slide {
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 60%;
+			}
+			
+			.swiper-slide1 {
+				position: absolute;
+				top: 13%;
+				text-align: center;
+				width: 100%;
+				display: none;
+			}
+			
+			.swiper-slide1_1 img {
+				width: 60%;
+			}
+			
+			.swiper-slide1_2 {
+				margin-top: 5px;
+				display: block;
+				font-size: 18px;
+				color: #FFFFFF;
+			}
+			
+			.a {
+				position: absolute;
+				bottom: 50px;
+				width: 100%;
+				text-align: center;
+				font-size: 14px;
+				color: #464646;
+				z-index: 9999999;
+			}
+			
+			.swiper_points {
+				position: absolute;
+				bottom: 50px;
+				width: 100%;
+				text-align: center;
+			}
+			
+			.swiper_point {
+				background: rgba(255, 255, 255, 0.3);
+				width: 10px;
+				height: 10px;
+				display: inline-block;
+				border-radius: 50%;
+				margin-right: 6px;
+			}
+			
+			.swiper_point.active {
+				background: rgba(255, 255, 255, 1);
+			}
+			
+			.swiper-pagination-bullet-active,
+			.swiper-pagination-bullet {
+				background: #fff;
+				width: 10px;
+				height: 10px;
+				margin-right: 6px;
+			}
+			/*================================*/
+			
+			.main5_tit {
+				position: absolute;
+				left: 8%;
+				width: 84%;
+				text-align: center;
+				top: 11%;
+			}
+			
+			.main5_tit span {
+				display: block;
+			}
+			
+			.main5_tit1 img {
+				width: 80%;
+			}
+			
+			.main5_tit2 {
+				color: #fff;
+				font-size: 23px;
+			}
+			
+			.main5_btn {
+				position: absolute;
+				bottom: 55px;
+				left: 10%;
+				height: 44px;
+				line-height: 44px;
+				width: 80%;
+				font-size: 20px;
+				color: #FFFFFF;
+				z-index: 999999;
+				text-align: center;
+				border-radius: 6px;
+				border: 2px solid #fff;
+			}
+			/*================================*/
+			
+			.main6_tit {
+				position: absolute;
+				left: 8%;
+				width: 84%;
+				text-align: center;
+				top: 15%;
+			}
+			
+			.main6_tit span {
+				display: block;
+			}
+			
+			.main6_tit1 img {
+				width: 90%;
+			}
+			
+			.main6_info {
+				position: absolute;
+				bottom: 13%;
+				z-index: 999999;
+			}
+			
+			.main6_info1 {
+				display: inline-block;
+				width: 35%;
+				height: 52px;
+				text-align: center;
+				margin-left: 10%;
+				margin-right: 5%;
+				margin-top: 15px;
+				background: #fff;
+			}
+			
+			.main6_info2 {
+				display: inline-block;
+				width: 35%;
+				height: 52px;
+				text-align: center;
+				margin-left: 5%;
+				margin-right: 10%;
+				background: #fff;
+			}
+			
+			.main6_info1 img,
+			.main6_info2 img {
+				height: 52px;
+			}
+			/*================================*/
+			
+			.main7_tit {
+				position: absolute;
+				top: 15%;
+				left: 8%;
+				width: 84%;
+				text-align: center;
+			}
+			
+			.main7_tit span {
+				display: block;
+			}
+			
+			.main7_tit1 img {
+				width: 100%;
+			}
+			
+			.main7_tit2 {
+				color: #fff;
+				font-size: 21.5px;
+			}
+			
+			.main7_info1 {
+				position: absolute;
+				top: 33%;
+				left: 8%;
+				width: 84%;
+				font-size: 15px;
+				color: #FFFFFF;
+			}
+			
+			.main7_info2 {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				font-size: 14px;
+				color: #FFFFFF;
+				text-align: center;
+				line-height: 18px;
+			}
+			
+			@media screen and (max-height: 490px) {
+				.main1_tit1_2 {
+					color: #fff;
+					font-size: 14px;
+				}
+				/*==============================================*/
+				.main2_info {
+					top: 28%;
+				}
+				.main2_info1_1 img {
+					width: 50%;
+				}
+				.main2_info1_2 {
+					font-size: 20px;
+				}
+				.main2_info1_3 {
+					font-size: 16px;
+				}
+				/*==============================================*/
+				.main3_tit1 {
+					top: 13%;
+				}
+				.main3_tit3 {
+					top: 60%;
+				}
+				.main3_btn {
+					height: 35px;
+					line-height: 35px;
+					width: 70%;
+					font-size: 17px;
+					left: 15%;
+				}
+				/*==============================================*/
+				.swiper-slide {
+					height: 20px;
+				}
+				.swiper-slide {
+					width: 48%;
+				}
+				.swiper-slide1_2 {
+					font-size: 17px;
+				}
+				/*==============================================*/
+				.main5_btn {
+					bottom: 52px;
+					height: 35px;
+					line-height: 35px;
+					width: 70%;
+					font-size: 17px;
+					left: 15%;
+				}
+				.main5_tit {
+					left: 10%;
+					width: 80%;
+					top: 12%;
+				}
+				.main5_tit2 {
+					font-size: 20px;
+					margin-top: -7px;
+				}
+				/*==============================================*/
+				.main6_info1 {
+					display: inline-block;
+					width: 35%;
+					height: 50px;
+					text-align: center;
+					margin-left: 10%;
+					margin-right: 5%;
+					margin-top: 5px;
+					background: #fff;
+				}
+				.main6_info2 {
+					display: inline-block;
+					width: 35%;
+					height: 50px;
+					text-align: center;
+					margin-left: 5%;
+					margin-right: 10%;
+					background: #fff;
+				}
+				.main6_info1 img,
+				.main6_info2 img {
+					height: 50px;
+				}
+				/*==============================================*/
+				.main7_info1 {
+					top: 30%;
+					font-size: 14px;
+				}
+				.main7_info2 {
+					bottom: 15px;
+					font-size: 12px;
+					line-height: 17px;
+				}
+				.main7_tit {
+					position: absolute;
+					top: 13%;
+					left: 10%;
+					width: 80%;
+				}
+			}
+			
+			@media screen and (min-height: 620px) {
+				.main6_info1 {
+					display: inline-block;
+					width: 35%;
+					height: 62px;
+					text-align: center;
+					margin-left: 10%;
+					margin-right: 5%;
+					margin-top: 15px;
+					background: #fff;
+				}
+				.main6_info2 {
+					display: inline-block;
+					width: 35%;
+					height: 62px;
+					text-align: center;
+					margin-left: 5%;
+					margin-right: 10%;
+					background: #fff;
+				}
+				.main6_info1 img,
+				.main6_info2 img {
+					height: 62px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="header"><span class="header_l"><img src="/images/logo.png"></span><span class="header_r" id="menu"><span onclick="window.location='vip.html'">立即体验</span></span>
+		</div>
+		<div id="dowebok">
+			<div class="section section1">
+				<div class="main1_logo"><img src="images/main1_logo.png"></div>
+				<div class="main1_ios" onclick="window.location.href='http://a.baogongapp.com'"><span class="main1_ios1"><img src="images/download_ios.png"></span><span class="main1_ios2">下载苹果版</span></div>
+				<div class="main1_android" onclick="window.location.href='http://a.baogongapp.com'"><span class="main1_android1"><img src="images/download_android.png"></span><span class="main1_android2">下载安卓版</span></div>
+			</div>
+			<div class="section section2">
+				<div class="main2_num">截止 2016 年 8 月</div>
+				<div class="main2_logo"><img src="images/main2_logo.png"></div>
+				<div class="main2_info"><span class="main2_info1"><span class="main2_info1_1"><img src="images/main2_ico1.png"></span><span class="main2_info1_2">100个</span><span class="main2_info1_3">累积标的</span></span><span class="main2_info1"><span class="main2_info1_1"><img src="images/main2_ico2.png"></span><span class="main2_info1_2">480000m²</span><span class="main2_info1_3">累积面积</span></span><span class="main2_info1"><span class="main2_info1_1"><img src="images/main2_ico3.png"></span><span class="main2_info1_2">15亿元</span><span class="main2_info1_3">总规模项目</span></span><span class="main2_info1"><span class="main2_info1_1"><img src="images/main2_ico4.png"></span><span class="main2_info1_2">8000名</span><span class="main2_info1_3">实名认证用户</span></span>
+				</div>
+			</div>
+			<div class="section section3">
+				<div class="main3_tit1"><span class="main3_tit1_1"><img src="images/main3_tit1.png"></span><span class="main1_tit1_2">构建建筑人超级名片，展示自己的优势。 通过包公认证获得更多的认可与信任。</span></div>
+				<div class="main3_tit2"><span class="main3_tit1_1"><img src="images/main3_tit2.png"></span><span class="main1_tit1_2 wid">全新工程接单平台，工程发包，接二连三，一键报价，真实透明，公平公正。</span></div>
+				<div class="main3_tit3"><span class="main3_tit1_1"><img src="images/main3_tit3.png"></span><span class="main1_tit1_2">独家工程意外保险，不计名、不计人数、费率低，用户更能只保自己的队伍。</span></div>
+				<div class="main3_btn" onclick="window.location.href='vip.html'">加入会员 至尊体验</div>
+			</div>
+			<div class="section section4">
+				<span id="section4_tit1" class="swiper-slide1"><span class="swiper-slide1_1"><img src="images/wap_tit_a4_1.png"></span><span class="swiper-slide1_2">高品味生活礼品,会员独享<br>宝箱豪礼每日抽,100%中奖</span></span>
+				<span id="section4_tit2" class="swiper-slide1"><span class="swiper-slide1_1"><img src="images/wap_tit_a4_2.png"></span><span class="swiper-slide1_2">专属个人宣传页面,自由分享<br>大数据提取个人优点,包公认证</span></span>
+				<span id="section4_tit3" class="swiper-slide1"><span class="swiper-slide1_1"><img src="images/wap_tit_a4_3.png"></span><span class="swiper-slide1_2">工程发包不断,能工巧匠任选<br>招标、投标、融资、保险保障</span></span>
+				<span id="section4_tit4" class="swiper-slide1"><span class="swiper-slide1_1"><img src="images/wap_tit_a4_4.png"></span><span class="swiper-slide1_2">项目、价格、技术信息全有<br>人工筛选,商机快人一步</span></span>
+				<span id="section4_tit5" class="swiper-slide1"><span class="swiper-slide1_1"><img src="images/wap_tit_a4_5.png"></span><span class="swiper-slide1_2">高品味生活礼品,会员独享<br>宝箱豪礼每日抽,100%中奖</span></span>
+				<div class="swiper-container">
+					<div class="swiper-wrapper" id="section4_list">
+						<div class="swiper-slide" style="background-image:url('images/app1.png')"></div>
+						<div class="swiper-slide" style="background-image:url('images/app2.png')"></div>
+						<div class="swiper-slide" style="background-image:url('images/app3.png')"></div>
+						<div class="swiper-slide" style="background-image:url('images/app4.png')"></div>
+						<div class="swiper-slide" style="background-image:url('images/app5.png')"></div>
+					</div>
+				</div>
+				<div class="swiper_points" style="display:none ;">
+					<span class="swiper_point" id="swiper_point1"></span><span class="swiper_point" id="swiper_point2"></span><span class="swiper_point" id="swiper_point3"></span><span class="swiper_point" id="swiper_point4"></span><span class="swiper_point" id="swiper_point5"></span>
+				</div>
+				<div class="a" style="display:none ;">
+					&nbsp;
+				</div>
+			</div>
+			<div class="section section5">
+				<div class="main5_tit"><span class="main5_tit1"><img src="images/main5_tit.png"></span><span class="main5_tit2">做有身份的建筑人</span></div>
+				<div class="main5_btn" onclick="window.location.href='niuren.html'">点击查看包公牛人</div>
+			</div>
+			<div class="section section6">
+				<div class="main6_tit"><span class="main6_tit1"><img src="images/main6_tit.png"></span></div>
+				<div class="main6_info"><span class="main6_info1"><img src="http://admin.suyikeji.com/upload/20160803/201608031246459843.png"></span><span class="main6_info2"><img src="http://admin.suyikeji.com/upload/20160803/201608031245191933.png"></span><span class="main6_info1"><img src="http://admin.suyikeji.com/upload/20160803/201608031245191933.png"></span><span class="main6_info2"><img src="http://admin.suyikeji.com/upload/20160803/201608031245191933.png"></span><span class="main6_info1"><img src="http://admin.suyikeji.com/upload/20160803/201608031245191933.png"></span><span class="main6_info2"><img src="http://admin.suyikeji.com/upload/20160803/201608031245191933.png"></span><span class="main6_info1"><img src="http://admin.suyikeji.com/upload/20160803/201608031245191933.png"></span><span class="main6_info2"><img src="http://admin.suyikeji.com/upload/20160803/201608031245191933.png"></span><span class="main6_info1"><img src="http://admin.suyikeji.com/upload/20160803/201608031245191933.png"></span><span class="main6_info2"><img src="http://admin.suyikeji.com/upload/20160803/201608031245191933.png"></span></div>
+			</div>
+			<div class="section section7">
+				<div class="main7_tit"><span class="main7_tit1"><img src="images/main7_tit.png"></span><span class="main7_tit2">- 诚信建筑人平台 -</span></div>
+				<div class="main7_info1">包公APP由上海速翼网络科技股份有限公司负责开发并运营管理，在2015年3月获得种子轮投资，2015年8月获得两千万天使轮融资。 <br><br>包公专注于建筑产业信息化，通过信用、信息、招投标、融资、保险等服务，为用户提高生产效率。 <br><br>项目方与供应商、施工队长间的相互信任在任何时候都是最为基本的条件，包公以“信任+合作+共赢”为立足点，通过移动互联网打造诚信建筑人平台。</div>
+				<div class="main7_info2">客服热线：<span onclick="window.location.href = 'tel:10086'">400-***-400</span><br>&copy;2016 **科技2016 京ICP证66**66号<br>www.***.com保留一切权利</div>
+			</div>
+		</div>
+		<div class="arrow"><img src="images/arrow.png"></div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="js/swiper-3.4.0.jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('.swiper-slide').css('height', $('.swiper-slide').width() * 950 / 590 + 'px');
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.a',
+				effect: 'coverflow',
+				centeredSlides: true,
+				loop: true,
+				speed: 1000,
+				autoplay: 3000,
+				autoplayDisableOnInteraction: false,
+				slidesPerView: 'auto',
+				coverflow: {
+					rotate: 0,
+					stretch: -20,
+					depth: 350,
+					modifier: 1,
+					slideShadows: false
+				},
+				paginationType: 'custom',
+				preventLinksPropagation: true,
+				paginationCustomRender: function(swiper, current, total) {
+					$("#section4_list .swiper-slide").each(function(i, item) {
+						$(this).css("opacity", 0.66);
+					});
+					$("#section4_list .swiper-slide-active").each(function(i, item) {
+						$(this).css("opacity", 1);
+					});
+					for(var i = 1; i <= 5; i++) {
+						$("#section4_tit" + i).hide();
+					}
+					$("#section4_tit" + current).fadeIn();
+					$(".swiper_points span").each(function() {
+						$(this).css("background", "rgba(255, 255, 255, 0.3)");
+					});
+					$("#swiper_point" + current).css("background", "rgba(255, 255, 255, 1)");
+				}
+			});
+			$('#dowebok').fullpage({
+				navigation: false,
+				easing: 'easeInQuart',
+				slidesNavigation: true,
+				loopHorizontal: true,
+				controlArrowColor: 'transparent',
+				slidesNavPosition: 'bottom',
+				onLeave: function(cur, next) {
+					if(next == 4) {
+						$(".swiper_points").fadeIn();
+
+					} else if(next == 7) {
+						$(".arrow").fadeOut();
+					} else {
+						$(".arrow").fadeIn();
+						$(".swiper_points").fadeOut();
+					}
+				}
+			});
+		});
+
+		function line(id) {
+			for(var i = 1; i <= 5; i++) {
+				$("#page" + i).css("border-bottom", "0px solid #fff");
+			}
+			$(id).css("border-bottom", "1px solid #fff");
+		}
+	</script>
+
+</html>

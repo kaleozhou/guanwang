@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0203)http://console.aodianyun.com/share/index.php?r=lss/lssPublishShow&publishSite=rtmp%3A%2F%2F29458.lsspublish.aodianyun.com%2Fkaleo%2Fstream&lssContainer=publish&lssWidth=640&lssHeight=480&autoconnect=true -->
+<html><!--template compile at 2017-04-24 08:38:00--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title> 奥点云 —— 管理控制台 </title>
+  
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>    
+
+ <body>
+	<h1>发布预览</h1>
+    
+<div id="publish"></div>
+<script type="text/javascript" src="http://cdn.aodianyun.com/static/jquery/jquery-1.7.2.min.js"></script><!-- jquery地址也可使用您的地址 -->
+<script type="text/javascript" src="http://cdn.aodianyun.com/lss/aodianpublish/publish.js"></script>
+<script type="text/javascript">
+/*--加载播放器--*/
+var lss = new aodianLss({
+  container:'publish',//播放器容器ID，必要参数
+  url:'rtmp://29458.lsspublish.aodianyun.com/kaleo/stream',//控制台开通的APP rtmp地址，必要参数
+  width: '640',//播放器宽度，可用数字、百分比等
+  height: '480',//播放器高度，可用数字、百分比等
+  autoconnect: true//加载完毕后是否初始化连接，默认为true
+});
+/*--
+  以下为播放器加载完成后支持事件
+  （注意：必须在播放器加载完成后才能调用，否则会出现对象为空的错误！建议将事件绑定至网页元素中。)
+--*/
+/*--
+  事件名：initConnect
+  作用：初始化连接
+  返回值：true|false
+  注意：播放器很多事件需要此事件支持，建议再加载播放器阶段将autoconnect设置为true
+--*/
+lss.initConnect();
+
+/*--
+  事件名：closeConnect
+  作用：断开连接
+  返回值：true|false
+--*/
+lss.closeConnect();
+
+/*--
+  事件名：getMic
+  作用：获得麦克风列表
+  返回值：Array，格式为：{0:"Mic1",1:"Mic2",2:"Mic3"}
+  注意：上麦时需要传麦克风的key
+--*/
+lss.getMic();
+
+/*--
+  事件名：getCam
+  作用：获得摄像头列表
+  返回值：Array，格式为：{0:"Cam1",1:"Cam2",2:"Cam3"}
+  注意：上麦时需要传摄像头的key
+--*/
+lss.getCam();
+
+/*--
+  事件名：startPublish
+  作用：发布
+  参数：数组，结构为：
+    micID（麦克风列表中的一个key），
+    camID（摄像头列表中的一个key），
+    audioKBitrate（音频码率，只能为16~48数字，单位kbps，默认为44），
+    audioSamplerate（音频采样率，只能为16000~48000数字，单位Hz，默认为44100），
+    videoFPS（视频帧率，只能为1~25数字，默认为10），
+    keyFrameInterval（设置关键帧间隔，只能为数字，默认为30），
+    videoKBitrate（视频码率，只能为96~512数字，单位kbps，默认为256），
+    videoQuality（视频质量，只能为1-85数字，越高画面质量越好，默认为80），
+    volume（音量，只能为0-100数字，默认为80），
+    isUseCam（是否使用摄像头，true|false，默认为true），
+    isUseMic（是否使用麦克风，true|false，默认为true），
+    isMute（是否静音，true|false，默认为false）
+  注意：initConnect()之后调用有效
+--*/
+
+var publishConf = {
+  micID:0,
+  camID:0,
+  audioKBitrate:44,
+  audioSamplerate:44100,
+  videoFPS:10,
+  keyFrameInterval:30,
+  videoKBitrate:256,
+  videoQuality:80,
+  volume:80,
+  isUseCam:true,
+  isUseMic:true,
+  isMute:false
+};
+lss.startPublish(publishConf);
+
+
+/*--
+  事件名：setMic
+  作用：使用或切换麦克风
+  参数：micID（麦克风列表中的一个key）
+  注意：startPublish()之后调用有效
+--*/
+lss.setMic(micID);
+
+/*--
+  事件名：setCam
+  作用：使用或切换麦克风
+  参数：camID（摄像头列表中的一个key）
+  注意：startPublish()之后调用有效
+--*/
+lss.setCam(camID);
+
+/*--
+  事件名：setCameraMode
+  作用：设置摄像头捕获画面的大小，帧率
+  参数：weight（宽度，只能为数字），height（高度：只能为数字）,videoFPS（视频帧率，只能为1~25数字）
+  注意：initConnect()之后调用有效
+--*/
+lss.setCameraMode(weight,height,videoFPS);
+
+/*--
+  事件名：setCameraQuality
+  作用：设置视频码率，质量
+  参数：
+    videoKBitrate（视频码率，只能为96~512数字，单位kbps），
+    videoQuality（视频质量，只能为1-85数字，越高画面质量越好），数字）
+  注意：initConnect()之后调用有效
+--*/
+lss.setCameraQuality(videoKBitrate,videoQuality);
+
+/*--
+  事件名：setAudioBitrate
+  作用：设置音频码率
+  参数：audioKBitrate（音频码率，只能为16~48数字，单位kbps）
+  注意：initConnect()之后调用有效
+--*/
+lss.setAudioBitrate(audioKBitrate);
+
+/*--
+  事件名：setAudioSamplerate
+  作用：设置音频采样率
+  audioSamplerate（音频采样率，只能为16000~48000数字，单位Hz））
+  注意：initConnect()之后调用有效
+--*/
+lss.setAudioSamplerate(audioKBitrate);
+
+/*--
+  事件名：setMute
+  作用：设置音频采样率
+  isMute（是否静音，true|false）
+  注意：initConnect()之后调用有效
+--*/
+lss.setMute(isMute);
+
+/*--
+  事件名：lss.setVolume
+  作用：设置音量
+  volume（音量，只能为0-100数字），
+  注意：initConnect()之后调用有效
+--*/
+lss.setVolume(volume);
+</script>
+</body>
+</html>

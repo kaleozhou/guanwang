@@ -1,0 +1,8 @@
+.layer_box{display: none;width: 463px;height:auto;background: url(/images/layer_box.png) no-repeat center top;text-align: center;}
+.layer_box img{width: 160px;height: 160px;text-align: center;margin: auto;margin-top: 85px;border: 1px solid #94593b;margin-right: 25px;}
+.layer_box .close_x{width: 41px;height: 40px;position: absolute;right: 0;top: 0; cursor: pointer;}
+.layer_box p{text-align: center;font-size: 24px;margin: 0px;padding-top: 10px;margin-right: 25px;}
+.layer_box p span{font-weight: bold;color: #ff0000;height:30px;}
+.layui-layer{box-shadow: none!important;}
+
+.form_box{text-align: center;margin-top:0px;}

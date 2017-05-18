@@ -1,0 +1,79 @@
+.ewm{
+    width:12%;
+    height:auto;
+    margin:-16% 0 0 42%;
+    position:relative   
+}
+.wxnumber{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fcff00;
+    line-height: 60px;
+    margin:-12% 0 0 68%;
+    position:relative   
+}
+.top3_7{
+    margin-top:3.7%;
+}
+.top5{
+    margin-top:5%;
+}
+.top9{
+    margin-top:9%;
+}
+.top8{
+    margin-top:8%;
+}
+.top11{
+    margin-top:11%;
+}
+.yii{
+    text-align: center;
+    font-size: 1em;
+    color: #6e2a08;
+    margin:-27% 0 0;
+    position:relative   
+}
+.yii_edit{
+    text-align: center;
+    font-size: 1em;
+    color: #6e2a08;
+    margin:5% 0 0 25%;
+    position:relative   
+}
+.red{
+    color:red;
+}
+.txt_1{
+    margin:-12% 0 0 36%;
+    position:relative   
+    text-align: center;
+    color: white;
+}
+.txt_2{
+    margin:-7% 0 0 30%;
+    position:relative   
+    text-align: center;
+    color: white;
+}
+.linggu{
+    width:28%;
+    height:22%;
+    margin:-12% 0 0 36%;
+    position:relative;   
+    color: white;
+
+}
+.yellor{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fcff00;
+}
+.minge{
+    color:white;
+    margin:-6% 0 0 30%;
+}
+.minge1{
+    color:white;
+    margin:-6% 0 0 30%;
+}
