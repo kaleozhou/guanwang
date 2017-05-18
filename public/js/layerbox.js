@@ -77,7 +77,6 @@ $(document).ready(function () {
     $(".close_x").click(function(){
         layer.close(cloindex);
     });
-
 });
 function myshow(){
     var sUserAgent= navigator.userAgent.toLowerCase(); 
@@ -90,7 +89,14 @@ function myshow(){
     var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce"; 
     var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile"; 
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) { 
-        top.location = 'http://top4.95105899.com/mobile1';
+        strs=url.split('?');
+        if(strs[1]!=null)
+        {
+            top.location = 'http://top4.95105899.com/mobile1?'+strs[1];
+        }
+        else{
+            top.location = 'http://top4.95105899.com/mobile1';
+        }
     }
     else
     {
@@ -108,7 +114,6 @@ function myshow(){
 }
 function getcode(name,phone){
     getVerificationCode(phone,name);
-
 }
 function adduser(name,phone,yzm){
     if (phone.length==11){
@@ -133,4 +138,3 @@ function adduser(name,phone,yzm){
         layer.alert('您的手机号码输入有误');
     }
 }
-
