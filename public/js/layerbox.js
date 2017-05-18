@@ -90,9 +90,7 @@ function myshow(){
     var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce"; 
     var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile"; 
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) { 
-        strs=url.split("?");
-        alert(strs[1]);
-        top.location = 'http://top4.95105899.com/mobile1'+'strs[1]';
+        top.location = 'http://top4.95105899.com/mobile1';
     }
     else
     {
